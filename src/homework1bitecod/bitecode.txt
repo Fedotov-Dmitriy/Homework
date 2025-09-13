@@ -1,0 +1,15 @@
+  4           0 LOAD_FAST                0 (a)
+              2 LOAD_CONST               1 (0)
+              4 COMPARE_OP               1 (<=)
+              6 POP_JUMP_IF_FALSE       12
+
+  5           8 LOAD_CONST               2 ('Число не является натуральным')
+             10 RETURN_VALUE
+
+  7     >>   12 LOAD_FAST                0 (a)
+             14 LOAD_CONST               3 (3)
+             16 BINARY_POWER
+             18 RETURN_VALUE
+             20 LOAD_CONST               0 (None)
+             22 RETURN_VALUE
+None

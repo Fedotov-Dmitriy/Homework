@@ -4,4 +4,3 @@ def evklidalg(a, b):
     else:
         d, x, y = evklidalg(b, a % b)
         return d, y, x - y * (a // b)
-print(evklidalg(350,9))

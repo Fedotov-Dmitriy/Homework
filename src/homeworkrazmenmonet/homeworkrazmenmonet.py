@@ -6,7 +6,7 @@ if otchestvo == 0:
     otchestvo = 19
 kolichestvoname = kolichestvosurname = kolichestvootchestvo = 0
 buffer = a
-while a >= min(name, surname, otchestvo): #Размен числа на монеты
+while a >= min(name, surname, otchestvo):
     if a >= otchestvo:
         a = a - otchestvo
         kolichestvootchestvo += 1
@@ -18,7 +18,7 @@ while a >= min(name, surname, otchestvo): #Размен числа на моне
         kolichestvoname += 1
 if (kolichestvoname * name) + (kolichestvootchestvo * otchestvo) + (
     kolichestvosurname * surname
-) == buffer: #Проверка на то, совпала ли сумма размена с первоначальной
+) == buffer:
     print(
         "Ваш размен(Количество монет номиналом Фамилия,Имя,Отчество) =",
         kolichestvosurname,

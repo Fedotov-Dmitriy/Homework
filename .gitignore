@@ -419,3 +419,5 @@ FodyWeavers.xsd
 *.msp
 .DS_Store
 .DS_Store
+build/
+.cache

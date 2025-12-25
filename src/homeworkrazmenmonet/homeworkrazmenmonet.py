@@ -1,23 +1,31 @@
 a = int(input("Введите Число\n"))
-name = len(input("Введите ваше имя\n"))
-surname = len(input("Введите вашу фамилию\n"))
-otchestvo = len(input("Введите ваше отчество если оно есть\n"))
-if otchestvo == 0:
-    otchestvo = 19    
-kolichestvoname = kolichestvosurname = kolichestvootchestvo = 0
+name_length = len(input("Введите ваше имя\n"))
+surname_length = len(input("Введите вашу фамилию\n"))
+otchestvo_length = len(input("Введите ваше отчество если оно есть\n"))
+if otchestvo_length == 0:
+    otchestvo_length = 19
+name_count = 0
+surname_count = 0
+otchestvo_count = 0
 buffer = a
-while a >= min(name,surname,otchestvo):
-    if a >= otchestvo:
-        a = a - otchestvo
-        kolichestvootchestvo+=1
-    if a >= surname:
-        a = a - surname
-        kolichestvosurname+=1
-    if a >= name:
-        a = a - name
-        kolichestvoname+=1
-if (kolichestvoname*name)+(kolichestvootchestvo*otchestvo)+(kolichestvosurname*surname) == buffer:
-    print("Ваш размен(Количество монет номиналом Фамилия,Имя,Отчество) =",kolichestvosurname,kolichestvoname,kolichestvootchestvo)
+while a >= min(name_length, surname_length, otchestvo_length):
+    if a >= otchestvo_length:
+        a = a - otchestvo_length
+        otchestvo_count += 1
+    if a >= surname_length:
+        a = a - surname_length
+        surname_count += 1
+    if a >= name_length:
+        a = a - name_length
+        name_length += 1
+if (name_length * name_count) + (otchestvo_length * otchestvo_count) + (
+    surname_length * surname_count
+) == buffer:
+    print(
+        "Ваш размен(Количество монет номиналом Фамилия,Имя,Отчество) =",
+        surname_length,
+        name_length,
+        otchestvo_length,
+    )
 else:
-    print('-42!')
-
+    print("-42!")
